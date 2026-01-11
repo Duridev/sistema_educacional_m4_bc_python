@@ -17,6 +17,19 @@ class Asignatura:
         
     def programar_prueba(self):
         print(f"La programación de las pruebas es: {self._fecha_pruebas}")
+        
+    def obtener_asignatura(self):
+        return self._nombre_asignatura
+    
+    def rendir_prueba(self, nombre_prueba):
+        if nombre_prueba in self._fecha_pruebas:
+            print(
+                f"{nombre_prueba}, "
+                f"con fecha del {self._fecha_pruebas[nombre_prueba]}"
+                  )
+        else:
+            print("La prueba seleccionada no existe")
+        
     
     
 class Alumno:
@@ -29,19 +42,20 @@ class Alumno:
     def mostrar_datos(self):
         print(
             "*** Datos del alumno ***\n\n"
-            f"Nombre: {self._nombre}"
-            f"Edad: {self._edad}"
-            f"Rut: {self._rut}"
-              )
+            f"Nombre: {self._nombre}\n"
+            f"Edad  : {self._edad}\n"
+            f"Rut   : {self._rut}"
+            )
         
     def estudiar(self):
         print(f"El alumno {self._nombre} se ha puesto a estudiar")
         
     def tomar_asignatura(self):
-        print(f"El alumno {self._nombre} a inscrito la asignatura {self._asignatura._nombre_asignatura}")
+        print(f"El alumno {self._nombre} ha inscrito la asignatura {self._asignatura.obtener_nombre()}")
     
-    def hacer_prueba(self):
-        print(f"El alumno {self._nombre} a hecho la/s siguiente/s prueba/s: {self._asignatura._fecha_pruebas}")
+    def hacer_prueba(self, nombre_prueba):
+        print(f"El alumno {self._nombre} dará la prueba: ")
+        self._asignatura.rendir_prueba(nombre_prueba)
     
 class Curso:
     def __init__(self, nombre_curso, letra):
