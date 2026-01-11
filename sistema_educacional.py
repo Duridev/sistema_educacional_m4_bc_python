@@ -73,3 +73,15 @@ class Profesor:
         pass
     
     
+    
+class Sala:
+    def __init__(self, numero_sala, puestos):
+        self._numero_sala = numero_sala
+        self._puestos = puestos
+        
+    def abrir_sala(self):
+        pass
+    
+    def cerrar_sala(self):
+        pass
+    
