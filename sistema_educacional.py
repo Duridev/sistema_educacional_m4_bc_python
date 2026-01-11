@@ -43,3 +43,17 @@ class Alumno:
     def hacer_prueba(self):
         print(f"El alumno {self._nombre} a hecho la/s siguiente/s prueba/s: {self._asignatura._fecha_pruebas}")
     
+class Curso:
+    def __init__(self, nombre_curso, letra):
+        self._nombre = nombre_curso
+        self._letra = letra
+        
+    def asignar_alumno(self):
+        pass
+    
+    def asignar_prof_jefe(self):
+        pass
+    
+    def mostrar_curso(self):
+        pass
+    
