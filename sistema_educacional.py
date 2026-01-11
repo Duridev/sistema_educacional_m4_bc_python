@@ -57,3 +57,19 @@ class Curso:
     def mostrar_curso(self):
         pass
     
+class Profesor:
+    def __init__(self, nombre_profesor, jefe_curso, ramo_especialidad):
+        self._nombre_profesor = nombre_profesor
+        self._jefe_curso = jefe_curso
+        self._ramo_especialidad = ramo_especialidad
+        
+    def hacer_clase(self):
+        pass
+    
+    def evaluar_alumno(self):
+        pass
+    
+    def solicitar_tarea(self):
+        pass
+    
+    
